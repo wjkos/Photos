@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <span>MPrestPhotos</span>
+</mat-toolbar>
+
+<mat-grid-list cols="12" rowHeight="600px" id="main-container">
+    <mat-grid-tile [colspan]="4" id="large-photo">
+        <app-large-photo></app-large-photo>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="8">
+        <div id="photos-table">
+            <app-photos-data-table *ngIf="this.photosData !== null" [photosData]="this.photosData"></app-photos-data-table>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

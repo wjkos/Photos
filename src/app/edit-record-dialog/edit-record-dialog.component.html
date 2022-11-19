@@ -1,0 +1,39 @@
+<div>
+    <h1 mat-dialog-title>
+        <mat-icon aria-hidden="false" fontIcon="edit_square" color="primary" ></mat-icon>
+        {{this.dialogTitle}}    
+    </h1>
+    <mat-dialog-content>
+        <table>
+        <tr><td><mat-form-field class="short-form-field">
+            <mat-label>ID</mat-label>
+                <input matInput type="text" [(ngModel)]="this.data.id" [disabled]="this.data.operation==='title-edit'">
+                <button *ngIf="this.data.id && this.data.operation==='new'" matSuffix mat-icon-button aria-label="Clear" (click)="this.data.id=''"><mat-icon>close</mat-icon></button>
+            </mat-form-field></td>
+            <td><mat-form-field class="short-form-field">
+            <mat-label>AlbumID</mat-label>
+                <input matInput type="text" [(ngModel)]="this.data.albumId" [disabled]="this.data.operation==='title-edit'">
+                <button *ngIf="this.data.albumId && this.data.operation==='new'" matSuffix mat-icon-button aria-label="Clear" (click)="this.data.albumId=''"><mat-icon>close</mat-icon></button>
+            </mat-form-field></td></tr>
+        <tr><td colspan="2"><mat-form-field class="long-form-field">
+            <mat-label>Title</mat-label>
+                <input matInput type="text" [(ngModel)]="this.data.title">
+                <button *ngIf="this.data.title" matSuffix mat-icon-button aria-label="Clear" (click)="this.data.title=''"><mat-icon>close</mat-icon></button>
+            </mat-form-field></td></tr>
+        <tr><td colspan="2"><mat-form-field class="long-form-field">
+            <mat-label>URL</mat-label>
+                <input matInput type="text" [(ngModel)]="this.data.url" [disabled]="this.data.operation==='title-edit'">
+                <button *ngIf="this.data.url && this.data.operation==='new'" matSuffix mat-icon-button aria-label="Clear" (click)="this.data.url=''"><mat-icon>close</mat-icon></button>
+            </mat-form-field></td></tr>
+        <tr><td colspan="2"><mat-form-field class="long-form-field">
+            <mat-label>ThumbnailUrl</mat-label>
+                <input matInput type="text" [(ngModel)]="this.data.thumbnailUrl" [disabled]="this.data.operation==='title-edit'">
+                <button *ngIf="this.data.thumbnailUrl && this.data.operation==='new'" matSuffix mat-icon-button aria-label="Clear" (click)="this.data.thumbnailUrl=''"><mat-icon>close</mat-icon></button>
+            </mat-form-field></td></tr>
+        </table>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="this.data" color="primary" cdkFocusInitial>Save</button>
+        <button mat-button [mat-dialog-close]="null" >Cancel</button>
+    </mat-dialog-actions>
+    </div>
