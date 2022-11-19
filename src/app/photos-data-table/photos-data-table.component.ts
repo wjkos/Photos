@@ -44,7 +44,8 @@ export class PhotosDataTableComponent implements OnInit {
   // -------------------------------------------------------------------
   filterTable(event) {
     this.filterValue = event.target.value;
-    this.displayedPhotosData = this.photosData.filter(record => record['title'].includes(this.filterValue));
+    this.displayedPhotosData = this.photosData.filter(record =>
+      record['title'].includes(this.filterValue) || record['id'].toString().includes(this.filterValue));
   }
   // -------------------------------------------------------------------
   openConfirmDialog(record, index) {
