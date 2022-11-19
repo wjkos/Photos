@@ -68,7 +68,7 @@ export class PhotosDataTableComponent implements OnInit {
     const dialogRef = this.dialog.open(EditRecordDialogComponent, {
       data: {
         id: record['id'],
-        albumId: record['id'],
+        albumId: record['albumId'],
         title: record['title'],
         url: record['url'],
         thumbnailUrl: record['thumbnailUrl'],
