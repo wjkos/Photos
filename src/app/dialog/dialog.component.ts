@@ -13,6 +13,8 @@ export interface DialogData {
 })
 export class ConfirmDialogComponent {
 
+  // A basic dialog asking confirmation for a delete operation
+  
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
 }

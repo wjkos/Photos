@@ -17,6 +17,11 @@ export interface DialogData {
 })
 export class EditRecordDialogComponent {
 
+  // This component is a dialog for adding a new record OR for editing an existing
+  // Mode determined by the DialogData parameter
+  // Editing title dialog presents the rest of the record data disabled for better user experience
+  // Input validation currently not implemented
+
   dialogTitle = '';
 
   // -------------------------------------------------------------------

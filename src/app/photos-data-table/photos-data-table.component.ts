@@ -11,6 +11,8 @@ import { StateManagerService } from '../Services/state-manager.service';
 })
 export class PhotosDataTableComponent implements OnInit {
 
+  // This component represents the table of the photos data
+
   @Input() photosData;
   displayedPhotosData = []; // shallow copy of photosData for filtering
   filterValue = '';         // for keeping the filter active after editing
@@ -42,11 +44,15 @@ export class PhotosDataTableComponent implements OnInit {
     this.openEditDialog({id:'', albumId:'', title:'', url:'', thumbnailUrl:''}, -1);
   }
   // -------------------------------------------------------------------
+  // Filters by id or title
+  // -------------------------------------------------------------------
   filterTable(event) {
     this.filterValue = event.target.value;
     this.displayedPhotosData = this.photosData.filter(record =>
       record['title'].includes(this.filterValue) || record['id'].toString().includes(this.filterValue));
   }
+  // -------------------------------------------------------------------
+  // opens a confirmation dialog for the delete operation with appropriate message
   // -------------------------------------------------------------------
   openConfirmDialog(record, index) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
@@ -63,6 +69,8 @@ export class PhotosDataTableComponent implements OnInit {
       }
     });
   }
+  // -------------------------------------------------------------------
+  // opens an edit dialog. index < 0 is for new record, otherwise editing existing
   // -------------------------------------------------------------------
   openEditDialog(record, index) {
     const dialogRef = this.dialog.open(EditRecordDialogComponent, {
