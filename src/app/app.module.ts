@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { LargePhotoComponent } from './large-photo/large-photo.component';
 import { EditRecordDialogComponent } from './edit-record-dialog/edit-record-dialog.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { TableMaterialComponent } from './table-material/table-material.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MainHostComponent,
     ConfirmDialogComponent,
     LargePhotoComponent,
-    EditRecordDialogComponent
+    EditRecordDialogComponent,
+    TableMaterialComponent
   ],
   imports: [
     BrowserModule,

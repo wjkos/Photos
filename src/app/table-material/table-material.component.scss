@@ -1,0 +1,85 @@
+table {
+    width: 100%;
+}
+.table-container{
+    overflow-y: auto;
+    max-height: 550px;
+}
+.mat-table{
+    width: 100%;
+}
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+// td, th {
+//     width: 25%;
+// }
+img {
+    width: 40px;
+}
+.mat-row:hover{
+    // transform: scale(1.01);
+    background-color: rgb(251, 229, 187);
+}
+.deleteIcon {
+    color: rgb(255, 140, 0);
+    cursor: pointer;
+}
+.deleteIcon:hover {
+    // background-color: black;
+    transform: scale(1.4);
+    border-radius: 3px;
+}
+.editIcon {
+    color: rgb(83, 0, 143);
+    cursor: pointer;
+}
+.editIcon:hover {
+    transform: scale(1.4);
+    border-radius: 3px;
+}
+.id-column{
+    width: 5%;
+}
+.albumid-column{
+    width: 5%;
+}
+.title-column{
+    width: 60%;
+}
+.picture-column{
+    width: 10%;
+}
+.actions-column{
+    width: 20%;
+}
+.mat-form-field{
+    width: 90%;
+}
+.matInput{
+    width: 90%;
+    color: white;
+}
+#main-control-buttons{
+    width: 10%;
+    // background-color: rgb(164, 164, 163);
+    // border: 1px solid red;
+    height: 42px;
+    float: right;
+}
+.addNewIcon {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.5);
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.addNewIcon:hover {
+    transform: scale(1.7);
+}
+.mat-paginator-sticky {
+    bottom: 0px;
+    position: sticky;
+    z-index: 10;
+  }
