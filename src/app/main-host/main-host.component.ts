@@ -12,6 +12,7 @@ export class MainHostComponent implements OnInit {
   // Keeps the Angular AppComponent slim for future changes.
 
   photosData = null;  // holds the array of photos retrieved from server
+  isMaterialTable = true;
 
   // -------------------------------------------------------------------
   constructor(private httpClient:HttpService) { }
@@ -24,5 +25,6 @@ export class MainHostComponent implements OnInit {
     );
     this.httpClient.getPhotosData(); // triggers data retrieval from the server
   }
+  // -------------------------------------------------------------------
 
 }
